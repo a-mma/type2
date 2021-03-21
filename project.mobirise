@@ -47,7 +47,7 @@
     "siteUrl": false,
     "cookiesAlert": false,
     "gdpr": false,
-    "uniqCompNum": 10,
+    "uniqCompNum": 11,
     "versionPublish": "5.3.0",
     "screenshot": "screenshot.png"
   },
@@ -210,7 +210,7 @@
           },
           "_name": "content4",
           "_sourceTheme": "mobirise-amp",
-          "_customHTML": "<section class=\"content4 mbr-section article\" plugins=\"amp-main\" group=\"Article\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Style</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <select name=\"alignContent\" title=\"Align Content\">\n            <option value=\"1\">Left</option>\n            <option value=\"2\" selected>Center</option>\n            <option value=\"3\">Right</option>\n        </select>\n        <input type=\"range\" title=\"Width\" name=\"textWidth\" min=\"4\" max=\"12\" step=\"1\" value=\"10\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Image\" value=\"../_images/background4.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"mbr-row\" mbr-class=\"{'mbr-jc-c' : alignContent == 2, 'mbr-jc-e' : alignContent == 3}\">\n            <div class=\"mbr-col-sm-12 mbr-md-12 mbr-col-lg-{{textWidth}}\">\n                <p class=\"mbr-text align-center mbr-fonts-style mbr-regular\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">Hey curious reader,&nbsp;<br><br>Currently, we're at the very beginning stage still trying to sort out problems that we can address one step at a time. If you're interested and feel like doing something with us, why not join the quest?<br><br>If you find this an interesting problem to solve, and would like to learn more about the efforts and concepts that the world is taking on, start reading about <a href=\"https://en.wikipedia.org/wiki/Kardashev_scale\" class=\"text-primary\" target=\"_blank\">Kardashev scale</a>&nbsp;or checkout the video below.<br><br>regards,<br>team a-mma (a_മ്മ).</p>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_customHTML": "<section class=\"content4 mbr-section article\" plugins=\"amp-main\" group=\"Article\">\n    \n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Style</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"3\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"2\">\n        <select name=\"alignContent\" title=\"Align Content\">\n            <option value=\"1\">Left</option>\n            <option value=\"2\" selected>Center</option>\n            <option value=\"3\">Right</option>\n        </select>\n        <input type=\"range\" title=\"Width\" name=\"textWidth\" min=\"4\" max=\"12\" step=\"1\" value=\"10\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Image\" value=\"../_images/background4.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>\n\n    <div class=\"container\">\n        <div class=\"mbr-row\" mbr-class=\"{'mbr-jc-c' : alignContent == 2, 'mbr-jc-e' : alignContent == 3}\">\n            <div class=\"mbr-col-sm-12 mbr-md-12 mbr-col-lg-{{textWidth}}\">\n                <p class=\"mbr-text align-center mbr-fonts-style mbr-regular\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\">Hey curious reader,&nbsp;<br><br>Currently, we're at the very beginning stage still trying to sort out problems that we can address one step at a time. If you're interested and feel like doing something with us, why not join the quest?<br><br>If you find this an interesting problem to solve, and would like to learn more about the efforts and concepts that the world is taking on, start reading about <a href=\"https://en.wikipedia.org/wiki/Kardashev_scale\" class=\"text-primary\" target=\"_blank\">Kardashev scale</a>&nbsp;or checkout the video and references below.<br><br>regards,<br>team a-mma (a_മ്മ).</p>\n            </div>\n        </div>\n    </div>\n</section>",
           "_cid": "srZAd4ftFh",
           "_anchor": "content4-3",
           "_protectedParams": [],
@@ -256,6 +256,53 @@
           "_global": false,
           "_once": false,
           "_params": {}
+        },
+        {
+          "alias": false,
+          "_styles": {
+            "padding-top": "(@paddingTop * 15px)",
+            "padding-bottom": "(@paddingBottom * 15px)",
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)"
+            },
+            ".counter-container": {
+              "ol when (@stylizedCounters)": {
+                "list-style": "none",
+                "counter-reset": "myCounter",
+                "li": {
+                  "position": "relative",
+                  "&:before": {
+                    "box-sizing": "border-box",
+                    "position": "absolute",
+                    "left": "-60px",
+                    "counter-increment": "myCounter",
+                    "content": "counter(myCounter)",
+                    "text-align": "center",
+                    "margin": "0 10px",
+                    "width": "35px",
+                    "height": "35px",
+                    "color": "@counterColor",
+                    "font": "~\"bold 20px / 30px @{display4Font}\"",
+                    "border-radius": "50%",
+                    "border": "2px solid @counterColor",
+                    "opacity": "@counterOpacity"
+                  }
+                }
+              }
+            }
+          },
+          "_name": "content9",
+          "_sourceTheme": "mobirise-amp",
+          "_customHTML": "<section class=\"mbr-section 07\" plugins=\"amp-main\">\n    <mbr-parameters>\n    <!-- Block parameters controls (Blue \"Gear\" panel) -->\n        <header>Size</header>\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n        <select name=\"alignContent\" title=\"Align Content\">\n            <option value=\"1\">Left</option>\n            <option value=\"2\" selected>Center</option>\n            <option value=\"3\">Right</option>\n        </select>\n        <input type=\"range\" title=\"Width\" name=\"textWidth\" min=\"4\" max=\"12\" step=\"1\" value=\"10\">\n        <header>Counters</header>\n        <input type=\"checkbox\" title=\"Stylized\" name=\"stylizedCounters\" checked>\n        <input type=\"color\" title=\"Counters\" name=\"counterColor\" value=\"#005af0\" condition=\"stylizedCounters\">\n        <input type=\"range\" title=\"Opacity\" inline name=\"counterOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"1\" condition=\"stylizedCounters\">\n        <header>Background</header>\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"image\" title=\"Image\" value=\"../_images/background4.jpg\">\n            <input type=\"color\" title=\"Color\" value=\"#ffffff\" selected>\n        </fieldset>\n    <!-- End block parameters -->\n    </mbr-parameters>  \n\n    <div class=\"container\">\n        <div class=\"mbr-row\" mbr-class=\"{'mbr-jc-c' : alignContent == 2, 'mbr-jc-e' : alignContent == 3}\">\n            <div class=\"mbr-col-lg-{{textWidth}} mbr-col-md-12 mbr-col-sm-12\">\n                <div class=\"mbr-text counter-container mbr-fonts-style\" mbr-theme-style=\"display-7\" data-app-selector=\".mbr-text\" data-multiline mbr-article>\n                    <ol>\n                        <li class=\"mbr-pb-2\"><b style=\"font-family: inherit; font-size: inherit; font-style: inherit; font-variant-ligatures: inherit; font-variant-caps: inherit;\">KSEB case study</b> - <a href=\"https://www.kseb.in/index.php?option=com_content&view=article&id=34&Itemid=574&lang=en\" class=\"text-primary\" target=\"_blank\">https://www.kseb.in/index.php?option=com_content&amp;view=article&amp;id=34&amp;Itemid=574&amp;lang=en</a><br></li>\n                        <li class=\"mbr-pb-2\"><b>Energy Web Token</b> - <a href=\"https://energyweb.org/technology/token/\" class=\"text-primary\" target=\"_blank\">https://energyweb.org/technology/token/</a></li>\n                        <li class=\"mbr-pb-2\"><b>Tesla Autobidder</b> - <a href=\"https://www.tesla.com/support/tesla-energy-software#autobidder\" class=\"text-primary\">https://www.tesla.com/support/tesla-energy-software#autobidder</a></li><li class=\"mbr-pb-2\"><b>Upstreamdata</b>&nbsp;- <a href=\"https://www.upstreamdata.ca/\" class=\"text-primary\" target=\"_blank\">https://www.upstreamdata.ca/</a>&nbsp; |&nbsp;<a href=\"https://www.youtube.com/watch?v=V5ptXTH66hk\" class=\"text-primary\" target=\"_blank\"> https://www.youtube.com/watch?v=V5ptXTH66hk</a>&nbsp;&nbsp;</li><li class=\"mbr-pb-2\"><b>AAntonoP talk</b> - <a href=\"https://www.youtube.com/watch?v=2T0OUIW89II\" class=\"text-primary\" target=\"_blank\">https://www.youtube.com/watch?v=2T0OUIW89II</a></li><li class=\"mbr-pb-2\"><b>Renewable Energy Problems</b> - <a href=\"https://www.youtube.com/watch?v=h5cm7HOAqZY\" class=\"text-primary\" target=\"_blank\">https://www.youtube.com/watch?v=h5cm7HOAqZY</a></li>\n                    </ol>\n                </div>\n            </div>\n        </div>\n    </div>\n</section>",
+          "_cid": "ssjrItFow3",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {},
+          "_anchor": "content9-a"
         },
         {
           "alias": false,
